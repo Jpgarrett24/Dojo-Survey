@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <main>
+        <form action="/result" method="POST">
+            <input type="text" name="name" id="name" placeholder="Your Name">
+            <select name="location" id="location">
+                <option value="" disabled selected>Select your location</option>
+                <option value="Seattle">Seattle</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Orange County">Orange County</option>
+                <option value="North Pole">North Pole</option>
+            </select>
+            <select name="language" id="language">
+                <option value="" disabled selected>Favorite Language</option>
+                <option value="C#">C#</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Swahili">Swahili</option>
+            </select>
+            <textarea name="comments" id="comments" cols="100" rows="10" placeholder="Additional comments (optional)"></textarea>
+            <button>Submit</button>
+        </form>
+    </main>
+</body>
+</html>
