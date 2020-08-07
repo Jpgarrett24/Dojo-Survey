@@ -1,3 +1,5 @@
+@model DojoSurvey.Models.Info
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +11,10 @@
 <body>
     <section class="results">
         <h3>Submitted Info:</h3>
-        <p><span class="title">Name:</span><span>@ViewBag.Name</span></p>
-        <p><span class="title">Dojo Location:</span><span>@ViewBag.Location</span></p>
-        <p><span class="title">Favorite Language:</span><span>@ViewBag.Language</span></p>
-        <p><span class="title">Comments:</span><span>@ViewBag.Comments</span></p>
+        <p><span class="title">Name:</span><span>@Model.Name</span></p>
+        <p><span class="title">Dojo Location:</span><span>@Model.Location</span></p>
+        <p><span class="title">Favorite Language:</span><span>@Model.Language</span></p>
+        <p><span class="title">Comments:</span><span>@Model.Comments</span></p>
         <a href="/">Go Back</a>
     </section>
 </body>

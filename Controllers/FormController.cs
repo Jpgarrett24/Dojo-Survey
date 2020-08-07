@@ -1,6 +1,9 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using DojoSurvey.Models;
 
-namespace DojoSurvey
+namespace DojoSurvey.Controllers
 {
     public class FormController : Controller
     {
@@ -11,13 +14,9 @@ namespace DojoSurvey
         }
 
         [HttpPost("result")]
-        public ViewResult Result(string name, string location, string language, string comments)
+        public ViewResult Result(Info FormInfo)
         {
-            ViewBag.Name = name;
-            ViewBag.Location = location;
-            ViewBag.Language = language;
-            ViewBag.Comments = comments;
-            return View("Results");
+            return View("Results", FormInfo);
         }
     }
 }
