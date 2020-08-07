@@ -14,9 +14,16 @@ namespace DojoSurvey.Controllers
         }
 
         [HttpPost("result")]
-        public ViewResult Result(Info FormInfo)
+        public IActionResult Result(Info FormInfo)
         {
-            return View("Results", FormInfo);
+            if (ModelState.IsValid)
+            {
+                return View("Results", FormInfo);
+            }
+            else
+            {
+                return View("Form");
+            }
         }
     }
 }

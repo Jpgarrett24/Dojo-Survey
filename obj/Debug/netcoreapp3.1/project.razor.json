@@ -20521,6 +20521,11 @@
   "RootNamespace": "DojoSurvey",
   "Documents": [
     {
+      "FilePath": "/Users/josephgarrett/Desktop/coding_dojo/C#/ASP.NET_Core/DojoSurvey/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/josephgarrett/Desktop/coding_dojo/C#/ASP.NET_Core/DojoSurvey/Views/Form/Results.cshtml",
       "TargetPath": "Views\\Form\\Results.cshtml",
       "FileKind": "mvc"

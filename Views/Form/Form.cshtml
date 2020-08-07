@@ -1,3 +1,5 @@
+@model Info
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,23 +10,27 @@
 </head>
 <body>
     <main>
-        <form action="/result" method="POST">
-            <input type="text" name="Name" id="Name" placeholder="Your Name">
-            <select name="Location" id="Location">
+        <form action="result" method="POST">
+            <span asp-validation-for="Name" style="color: red; display: block;"></span>
+            <input type="text" asp-for="Name" id="Name" placeholder="Your Name">
+            <span asp-validation-for="Location" style="color: red; display: block;"></span>
+            <select asp-for="Location" id="Location">
                 <option value="" disabled selected>Select your location</option>
                 <option value="Seattle">Seattle</option>
                 <option value="San Jose">San Jose</option>
                 <option value="Orange County">Orange County</option>
                 <option value="North Pole">North Pole</option>
             </select>
-            <select name="Language" id="Language">
+            <span asp-validation-for="Language" style="color: red; display: block;"></span>
+            <select asp-for="Language" id="Language">
                 <option value="" disabled selected>Favorite Language</option>
                 <option value="C#">C#</option>
                 <option value="JavaScript">JavaScript</option>
                 <option value="Python">Python</option>
                 <option value="Swahili">Swahili</option>
             </select>
-            <textarea name="Comments" id="Comments" cols="100" rows="10" placeholder="Additional comments (optional)"></textarea>
+            <span asp-validation-for="Comments" style="color: red; display: block;"></span>
+            <textarea asp-for="Comments" id="Comments" cols="100" rows="10" placeholder="Additional comments (optional)"></textarea>
             <button>Submit</button>
         </form>
     </main>
